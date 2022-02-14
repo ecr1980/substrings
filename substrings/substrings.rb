@@ -6,12 +6,10 @@ string_user_entry = user_entry.split("")
 print string_user_entry
 
 
-
 def substrings(user_input,stored_list)
-  sum = 0
-  
+  counter = Hash.new
     for word in stored_list do
-      
+      sum = 0
         word_array = word.split("")
         x = word_array.length()
         user_input.each_with_index do |element, index|
@@ -23,8 +21,12 @@ def substrings(user_input,stored_list)
           p new_word
           p word
         end
+        if sum > 0
+        counter["#{word}"] = sum
+        end
     end
-  puts sum
+  counter
 end
 
-substrings(string_user_entry, dictionary)
+list_total = substrings(string_user_entry, dictionary)
+puts list_total
