@@ -1,9 +1,7 @@
-dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "i", "low", "own", "part", "partner", "sit"]
+dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "it", "i", "low", "own", "part", "partner", "sit"]
 puts "Please enter a string, try to use some of the words listed in the default dictionary!"
-puts dictionary
-user_entry = gets.chomp
+user_entry = gets.chomp.downcase!
 string_user_entry = user_entry.split("")
-print string_user_entry
 
 
 def substrings(user_input,stored_list)
