@@ -15,11 +15,8 @@ def substrings(user_input,stored_list)
         user_input.each_with_index do |element, index|
           new_word = user_input[index, x]
           if new_word == word_array
-            puts "got one!"
             sum = sum + 1
           end
-          p new_word
-          p word
         end
         if sum > 0
         counter["#{word}"] = sum
